@@ -1,8 +1,9 @@
-#' puzzle_01.R
-#' @name puzzle_01
-#' @title puzzle_01
+#' puzzle_01_01.R
+#' @name puzzle_01_01
+#' @title puzzle_01_01
 #' @description
-#' Solution to puzzle 01
+#' Solution to part 01
+#' of puzzle 01
 #' of Advent of Code 2025
 #' @author AXBRITT
 #' @import here magrittr
@@ -16,7 +17,7 @@ library(magrittr)
 here::i_am(
   base::paste(
     "puzzle_01",
-    "puzzle_01.R",
+    "puzzle_01_01.R",
     sep = .Platform$file.sep
   )
 )
@@ -113,7 +114,7 @@ utils::write.csv(
   file = here::here(
     "puzzle_01",
     "output",
-    "OUTPUT.csv"
+    "OUTPUT_01.csv"
   )
 )
 
@@ -123,6 +124,6 @@ base::cat(
   file = here::here(
     "puzzle_01",
     "output",
-    "password.txt"
+    "password_01.txt"
   )
 )
