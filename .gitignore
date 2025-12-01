@@ -1,1 +1,5 @@
+# Don't track input files
 */input/*
+
+# Don't track output files
+*/output/*
