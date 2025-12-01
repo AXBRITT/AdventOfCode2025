@@ -59,10 +59,10 @@ rotate_step <- function(
 ) {
   current_value <- this_value(current_value + step_change, digit_count)
   loop_count <- loop_count - 1
-  if(current_value == 0) {
+  if (current_value == 0) {
     zero_count = zero_count + 1
   }
-  if(loop_count == 0) {
+  if (loop_count == 0) {
     output_data <- base::data.frame(
       STEP = current_value,
       OUTPUT = zero_count
@@ -87,7 +87,8 @@ this_rotation <- function(this_input, current_value) {
     this_input,
     2,
     base::nchar(this_input)
-  ) |> as.integer()
+  ) |>
+    as.integer()
   switch(
     direction,
     L = return_value <- rotate_step(
@@ -135,12 +136,14 @@ View(output_data)
 password <- base::sum(output_data$OUTPUT)
 print(password)
 ## Create output directory ----
-if(!base::dir.exists(
-  here::here(
-    "puzzle_01",
-    "output"
+if (
+  !base::dir.exists(
+    here::here(
+      "puzzle_01",
+      "output"
+    )
   )
-)) {
+) {
   base::dir.create(
     here::here(
       "puzzle_01",
